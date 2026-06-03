@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité — NovaGYM</title>
+  <meta name="description" content="Politique de confidentialité de l'application NovaGYM." />
+  <link rel="icon" href="icon.png" />
+  <style>
+    :root{--bg:#0a0b0a;--card:#161816;--line:#23271f;--txt:#f4f7f0;--muted:#9aa394;--accent:#B6FF00}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent)}
+    .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+    header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,11,10,.85);backdrop-filter:blur(12px)}
+    nav{display:flex;align-items:center;gap:10px;height:62px;font-weight:800;font-size:18px}
+    nav img{width:30px;height:30px;border-radius:8px}
+    nav a.back{margin-left:auto;font-size:14px;font-weight:600;color:var(--muted)}
+    nav a.back:hover{color:var(--txt)}
+    main{padding:54px 0 80px}
+    h1{font-size:34px;font-weight:850;letter-spacing:-.5px;margin-bottom:8px}
+    .updated{color:var(--muted);font-size:14px;margin-bottom:36px}
+    h2{font-size:20px;margin:34px 0 10px;color:var(--accent)}
+    p,li{color:#d7ddcf;font-size:15.5px;margin-bottom:10px}
+    ul{padding-left:22px;margin-bottom:10px}
+    strong{color:var(--txt)}
+    footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13.5px;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <img src="icon.png" alt="NovaGYM" /> NovaGYM
+        <a class="back" href="index.html">← Retour</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Politique de confidentialité</h1>
+      <p class="updated">Dernière mise à jour : 3 juin 2026</p>
+
+      <p>NovaGYM (« l'application », « nous ») respecte votre vie privée. Cette politique explique quelles données sont collectées, pourquoi, et comment elles sont protégées.</p>
+
+      <h2>1. Données que nous collectons</h2>
+      <ul>
+        <li><strong>Compte</strong> : adresse e-mail (via Connexion avec Apple ou e-mail) pour créer et sécuriser votre compte.</li>
+        <li><strong>Données d'entraînement</strong> : séances réalisées, programmes, statistiques, badges, défis de groupe.</li>
+        <li><strong>Données de nutrition</strong> : repas, calories et hydratation que vous saisissez.</li>
+        <li><strong>Données de santé (Apple Santé / HealthKit)</strong> : nombre de pas quotidiens, lus uniquement avec votre autorisation explicite.</li>
+      </ul>
+
+      <h2>2. Pourquoi nous utilisons ces données</h2>
+      <p>Ces données servent exclusivement à faire fonctionner l'application : afficher votre progression, calculer vos objectifs caloriques, estimer les calories brûlées à partir des pas, et synchroniser vos données entre vos appareils.</p>
+
+      <h2>3. Données de santé (HealthKit)</h2>
+      <p>Le nombre de pas issu d'Apple Santé est utilisé uniquement pour estimer votre dépense énergétique et ajuster vos objectifs nutritionnels. Conformément aux règles d'Apple :</p>
+      <ul>
+        <li>Ces données ne sont <strong>jamais</strong> utilisées à des fins publicitaires ou marketing.</li>
+        <li>Elles ne sont <strong>jamais</strong> vendues ni partagées avec des tiers.</li>
+        <li>Vous pouvez retirer l'accès à tout moment dans Réglages &gt; Santé.</li>
+      </ul>
+
+      <h2>4. Stockage et sécurité</h2>
+      <p>Vos données sont stockées sur votre appareil et sur nos serveurs sécurisés (hébergés par Supabase). Les communications sont chiffrées (HTTPS).</p>
+
+      <h2>5. Partage</h2>
+      <p>Nous ne vendons ni ne louons vos données personnelles. Aucune donnée n'est partagée avec des tiers à des fins publicitaires.</p>
+
+      <h2>6. Conservation et suppression</h2>
+      <p>Vos données sont conservées tant que votre compte est actif. Vous pouvez demander la suppression de votre compte et de vos données en nous contactant.</p>
+
+      <h2>7. Vos droits</h2>
+      <p>Vous disposez d'un droit d'accès, de rectification et de suppression de vos données (RGPD). Pour exercer ces droits, contactez-nous.</p>
+
+      <h2>8. Contact</h2>
+      <p>Pour toute question : <a href="mailto:novagympro@proton.me">novagympro@proton.me</a></p>
+    </div>
+  </main>
+
+  <footer>© <span id="yr"></span> NovaGYM. Tous droits réservés.</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

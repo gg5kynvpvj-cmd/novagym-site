@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaGYM — Ton coach musculation & nutrition</title>
+  <meta name="description" content="NovaGYM : suis tes séances, ta nutrition et ta progression. Programmes, calories, hydratation, défis de groupe et connexion à Apple Santé." />
+  <link rel="icon" href="icon.png" />
+  <meta property="og:title" content="NovaGYM" />
+  <meta property="og:description" content="Ton coach musculation & nutrition tout-en-un." />
+  <meta property="og:image" content="icon.png" />
+  <style>
+    :root{
+      --bg:#0a0b0a; --bg2:#111311; --card:#161816; --line:#23271f;
+      --txt:#f4f7f0; --muted:#9aa394; --accent:#B6FF00; --water:#4FC3F7;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);color:var(--txt);line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+    .accent{color:var(--accent)}
+
+    /* NAV */
+    header{position:sticky;top:0;z-index:50;background:rgba(10,11,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.3px}
+    .brand img{width:32px;height:32px;border-radius:8px}
+    .nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+    .nav-links a:hover{color:var(--txt)}
+    @media(max-width:680px){.nav-links{display:none}}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;border-radius:14px;padding:14px 24px;font-size:15px;transition:.15s}
+    .btn-primary{background:var(--accent);color:#0a0b0a}
+    .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+    .btn-ghost{border:1px solid var(--line);color:var(--txt)}
+    .btn-ghost:hover{border-color:var(--accent)}
+
+    /* HERO */
+    .hero{text-align:center;padding:90px 0 70px;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(182,255,0,.13),transparent 65%);pointer-events:none}
+    .hero .pill{display:inline-block;font-size:12.5px;color:var(--accent);border:1px solid rgba(182,255,0,.35);border-radius:999px;padding:6px 14px;margin-bottom:24px;letter-spacing:.5px;text-transform:uppercase}
+    .hero h1{font-size:clamp(36px,7vw,62px);font-weight:850;line-height:1.05;letter-spacing:-1px}
+    .hero p.sub{color:var(--muted);font-size:clamp(16px,2.4vw,20px);max-width:620px;margin:20px auto 34px}
+    .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+    /* SECTIONS */
+    section{padding:70px 0}
+    .eyebrow{color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px}
+    h2{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-.5px;margin-bottom:16px}
+    .lead{color:var(--muted);font-size:17px;max-width:680px}
+
+    /* FEATURES */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:40px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+    .card .ico{font-size:26px;margin-bottom:14px}
+    .card h3{font-size:18px;margin-bottom:8px}
+    .card p{color:var(--muted);font-size:14.5px}
+
+    /* STEPS */
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:40px}
+    .step{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px;position:relative}
+    .step .num{position:absolute;top:-14px;left:24px;width:34px;height:34px;border-radius:10px;background:var(--accent);color:#0a0b0a;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+    .step h3{font-size:17px;margin:14px 0 8px}
+    .step p{color:var(--muted);font-size:14.5px}
+
+    /* ABOUT */
+    .about{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .about .lead{font-size:18px;max-width:760px}
+
+    /* CONTACT */
+    .contact-box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:40px;text-align:center;margin-top:30px}
+    .contact-box a.mail{display:inline-block;margin-top:14px;font-size:20px;font-weight:700;color:var(--accent)}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
+    .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .foot-links{display:flex;gap:22px}
+    .foot-links a:hover{color:var(--txt)}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top"><img src="icon.png" alt="NovaGYM" /> NovaGYM</a>
+        <div class="nav-links">
+          <a href="#features">Fonctionnalités</a>
+          <a href="#how">Comment ça marche</a>
+          <a href="#about">À propos</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <!-- Remplace # par le lien App Store une fois l'app publiée -->
+        <a class="btn btn-primary" href="#" style="padding:10px 18px;font-size:14px"> Télécharger</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="pill">Musculation · Nutrition · Progression</span>
+        <h1>Ton coach <span class="accent">tout-en-un</span><br/>dans ta poche.</h1>
+        <p class="sub">Suis tes séances, planifie tes programmes, maîtrise ta nutrition et regarde tes progrès jour après jour. Tout NovaGYM, dans une seule app.</p>
+        <div class="cta-row">
+          <!-- Remplace # par ton lien App Store -->
+          <a class="btn btn-primary" href="#"> Télécharger sur l'App Store</a>
+          <a class="btn btn-ghost" href="#features">Découvrir</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+      <div class="wrap">
+        <div class="eyebrow">Fonctionnalités</div>
+        <h2>Tout ce qu'il faut pour progresser</h2>
+        <p class="lead">Un seul endroit pour ton entraînement, ton alimentation et ta motivation.</p>
+        <div class="grid">
+          <div class="card"><div class="ico">🏋️</div><h3>Programmes & séances</h3><p>Crée tes programmes, suis ta séance du jour, enregistre tes séries et ta progression.</p></div>
+          <div class="card"><div class="ico">🥗</div><h3>Nutrition</h3><p>Suivi des calories, des macros et de l'hydratation, avec une vue par semaine claire.</p></div>
+          <div class="card"><div class="ico">📊</div><h3>Statistiques</h3><p>Visualise ton évolution : séances, volume, hydratation et tendances détaillées.</p></div>
+          <div class="card"><div class="ico">❤️</div><h3>Apple Santé</h3><p>Connecte tes pas quotidiens pour estimer tes calories brûlées automatiquement.</p></div>
+          <div class="card"><div class="ico">🏆</div><h3>Badges & défis</h3><p>Débloque des récompenses et lance des défis de groupe pour rester motivé.</p></div>
+          <div class="card"><div class="ico">🔔</div><h3>Rappels & widgets</h3><p>Rappel quotidien personnalisable et widgets sur ton écran d'accueil.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how" class="about">
+      <div class="wrap">
+        <div class="eyebrow">Comment ça marche</div>
+        <h2>Commence en 3 étapes</h2>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><h3>Télécharge l'app</h3><p>Installe NovaGYM depuis l'App Store et crée ton compte en quelques secondes.</p></div>
+          <div class="step"><div class="num">2</div><h3>Configure ton profil</h3><p>Renseigne tes objectifs, choisis ton programme et connecte Apple Santé si tu le souhaites.</p></div>
+          <div class="step"><div class="num">3</div><h3>Entraîne-toi & suis</h3><p>Lance ta séance du jour, note ta nutrition et regarde tes progrès s'accumuler.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="eyebrow">À propos</div>
+        <h2>NovaGYM</h2>
+        <p class="lead">NovaGYM est née d'une idée simple : réunir l'entraînement et la nutrition dans une application claire, motivante et facile à utiliser, sans superflu. Nous construisons un outil pensé pour les passionnés comme pour les débutants, qui veulent voir leurs efforts se transformer en résultats. Nous améliorons l'application en continu grâce à vos retours.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="about">
+      <div class="wrap">
+        <div class="eyebrow">Contact</div>
+        <h2>Une question ? Écris-nous</h2>
+        <div class="contact-box">
+          <p style="color:var(--muted)">Pour toute question, suggestion ou demande d'assistance. Nous répondons sous 24-48h.</p>
+          <a class="mail" href="mailto:novagympro@proton.me">novagympro@proton.me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot-row">
+      <div>© <span id="yr"></span> NovaGYM. Tous droits réservés.</div>
+      <div class="foot-links">
+        <a href="confidentialite.html">Politique de confidentialité</a>
+        <a href="mailto:novagympro@proton.me">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
