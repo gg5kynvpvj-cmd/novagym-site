@@ -44,8 +44,9 @@
     /* HERO */
     .hero{text-align:center;padding:90px 0 70px;position:relative;overflow:hidden}
     .hero::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(182,255,0,.13),transparent 65%);pointer-events:none}
-    .hero .hero-logo{width:150px;height:150px;object-fit:contain;margin:0 auto 18px;display:block;mix-blend-mode:screen;filter:drop-shadow(0 0 26px rgba(60,220,40,.45))}
-    @media(max-width:680px){.hero .hero-logo{width:120px;height:120px}}
+    .hero .hero-logo{font-size:clamp(44px,9vw,72px);font-weight:800;letter-spacing:-2px;line-height:1;margin:0 0 22px}
+    .hero .hero-logo .lg-nova{color:var(--txt)}
+    .hero .hero-logo .lg-gym{color:var(--accent)}
     .hero .pill{display:inline-block;font-size:12.5px;color:var(--accent);border:1px solid rgba(182,255,0,.35);border-radius:999px;padding:6px 14px;margin-bottom:24px;letter-spacing:.5px;text-transform:uppercase}
     .hero h1{font-size:clamp(36px,7vw,62px);font-weight:850;line-height:1.05;letter-spacing:-1px}
     .hero p.sub{color:var(--muted);font-size:clamp(16px,2.4vw,20px);max-width:620px;margin:20px auto 34px}
@@ -109,7 +110,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="wrap">
-        <img class="hero-logo" src="logo-n.png" alt="NovaGYM" />
+        <div class="hero-logo"><span class="lg-nova">Nova</span><span class="lg-gym">GYM</span></div>
         <span class="pill">Musculation · Nutrition · Progression</span>
         <h1>Ton coach <span class="accent">tout-en-un</span><br/>dans ta poche.</h1>
         <p class="sub">Suis tes séances, planifie tes programmes, maîtrise ta nutrition et regarde tes progrès jour après jour. Tout NovaGYM, dans une seule app.</p>
