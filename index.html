@@ -68,6 +68,24 @@
     .card h3{font-size:18px;margin-bottom:8px}
     .card p{color:var(--muted);font-size:14.5px}
 
+    /* SHOWCASE */
+    #apercu{padding-bottom:40px}
+    .shots{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:42px 22px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .shots::-webkit-scrollbar{display:none}
+    .shots::before,.shots::after{content:"";flex:0 0 max(0px,calc((100vw - 1080px)/2))}
+    .shot{flex:0 0 auto;scroll-snap-align:center;text-align:center;margin:0}
+    .phone{
+      width:236px;border-radius:34px;padding:10px;background:#1c1f1b;
+      border:1px solid #2c302a;
+      box-shadow:0 22px 50px rgba(0,0,0,.55), 0 0 0 1px rgba(182,255,0,.05);
+      position:relative;transition:transform .25s ease;
+    }
+    .phone::before{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);width:78px;height:6px;border-radius:99px;background:#000;z-index:2;opacity:.85}
+    .phone img{width:100%;display:block;border-radius:26px}
+    .shot:hover .phone{transform:translateY(-8px)}
+    .shot figcaption{margin-top:18px;color:var(--muted);font-size:14.5px;font-weight:600}
+    @media(max-width:680px){.phone{width:200px}}
+
     /* STEPS */
     .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:40px}
     .step{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px;position:relative}
@@ -98,6 +116,7 @@
         <a class="brand" href="#top"><img src="icon.png" alt="NovaGYM" /> NovaGYM</a>
         <div class="nav-links">
           <a href="#features">Fonctionnalités</a>
+          <a href="#apercu">Aperçu</a>
           <a href="#how">Comment ça marche</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
@@ -141,6 +160,37 @@
           <div class="card"><div class="ico">🏆</div><h3>Badges & défis</h3><p>Débloque des récompenses et lance des défis de groupe pour rester motivé.</p></div>
           <div class="card"><div class="ico">🔔</div><h3>Rappels & widgets</h3><p>Rappel quotidien personnalisable et widgets sur ton écran d'accueil.</p></div>
         </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE / APERÇU -->
+    <section id="apercu">
+      <div class="wrap">
+        <div class="eyebrow">Aperçu</div>
+        <h2>L'app en images</h2>
+        <p class="lead">Une interface sombre, claire et pensée pour aller à l'essentiel.</p>
+      </div>
+      <div class="shots" role="list">
+        <figure class="shot" role="listitem">
+          <div class="phone"><img src="shot-1.png" alt="Écran Aujourd'hui de NovaGYM" loading="lazy" /></div>
+          <figcaption>Ton tableau de bord du jour</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="phone"><img src="shot-2.png" alt="Statistiques de NovaGYM" loading="lazy" /></div>
+          <figcaption>Tes statistiques & progression</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="phone"><img src="shot-3.png" alt="Historique des séances" loading="lazy" /></div>
+          <figcaption>Ton historique d'entraînement</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="phone"><img src="shot-4.png" alt="Suivi nutrition" loading="lazy" /></div>
+          <figcaption>Ta nutrition & hydratation</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="phone"><img src="shot-5.png" alt="Widgets NovaGYM" loading="lazy" /></div>
+          <figcaption>Widgets sur ton écran d'accueil</figcaption>
+        </figure>
       </div>
     </section>
 
